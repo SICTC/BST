@@ -16,9 +16,6 @@ class BinarySearchTree(object):
         self._count = 0
         self._removed = None
         self._order = "pre"
-        
-    def size(self):
-        return self._count
     
     def _insert(self, r, k, v):
         #found where new value goes, so insert it
@@ -123,3 +120,6 @@ class BinarySearchTree(object):
                 yield el
         if self._order == "post":
             yield r._value
+           
+    def __len__(self):
+        return self._count
